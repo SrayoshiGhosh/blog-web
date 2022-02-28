@@ -4,7 +4,10 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/blogDB", { useNewUrlParser: true });
+mongoose.connect(
+  "mongodb+srv://admin-srayoshi:pritom123@cluster0.o9yrd.mongodb.net/blogDB?retryWrites=true&w=majority",
+  { useNewUrlParser: true }
+);
 
 const postSchema = new mongoose.Schema({
   postTitle: String,
